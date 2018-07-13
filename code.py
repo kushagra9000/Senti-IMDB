@@ -26,11 +26,7 @@ raw_input("Press Enter to continue...")
  		KaggleWord2VecUtility.review_to_wordlist(train["review"][i],True)))
  	# Create the bag of words
  	print "Creating the bag of words....\n"
- 	vectorizer = CountVectorizer(analyzer = "word",
- 								tokenizer = None,
- 								preprocessor = None,
- 								stop_words = None,
- 								max_features = 5000)
+ 	vectorizer = CountVectorizer(analyzer = "word",	tokenizer = None,preprocessor = None,stop_words = None,max_features = 5000)
 train_data_features = vectorizer.fit_transform(clean_train_reviews)
 train_data_features = train_data_features.toarray()
 
